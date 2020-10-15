@@ -1,8 +1,5 @@
 package com.assignment3;
-
-import java.util.Date;
 import java.util.Scanner;
-import java.time.Period;
 import java.time.LocalDate;
 
 //Take employee name,date of birth,month of birth
@@ -25,26 +22,26 @@ public class Main2 {
         System.out.print("Enter year of birth of the employee: ");
         int year = in.nextInt();
         System.out.print("Enter monthly salary of the employee:");
-        int salary = in.nextInt();
+        float salary = in.nextFloat();
         int currentYear = LocalDate.now().getYear();
         int age = currentYear - year;
 
-        int tax;
+        float tax;
         if (salary >= 5) {
             tax = salary*20/100 ;
         } else if (salary >= 4) {
-            tax = salary * 15/100 ;
+            tax = salary*15/100 ;
         } else if (salary >= 3) {
-            tax = salary * 10/100 ;
+            tax = salary*10/100 ;
         } else if (salary >= 2) {
-            tax = salary * 5/100 ;
+            tax = salary*5/100 ;
         }   else {
             tax = 0 ;
         }
 
-        System.out.print("The name of the employee: " + name +
-                "The age of the employee: " + age +
-                "The annual salary of the employee: " + salary +
+        System.out.print("The name of the employee: " + name + "\n" +
+                "The age of the employee: " + age + "\n" +
+                "The annual salary of the employee: " + salary + "\n" +
                 "The annual tax amount of the employee: " + tax
         );
     }
